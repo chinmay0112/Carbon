@@ -1,0 +1,100 @@
+<nav class="p-4 lg:p-15 w-full">
+  <!-- Mobile and small tablet layout (hamburger menu) -->
+  <div class="flex items-center justify-between lg:hidden">
+    <div class="text-xl font-bold">Logo</div>
+
+    <!-- Mobile menu button - Now with click event -->
+    <button class="mobile-menu-button" (click)="toggleMobileMenu()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile and small tablet menu (using ngClass for toggle) -->
+  <div
+    class="mobile-menu mt-4 lg:hidden"
+    [ngClass]="{ hidden: !isMobileMenuOpen }"
+  >
+    <ul class="flex flex-col space-y-4">
+      <li><a class="block">Home</a></li>
+      <li><a class="block">Services</a></li>
+      <li><a class="block">Blog</a></li>
+      <li><a class="block">About Us</a></li>
+      <li><a class="block">Contact</a></li>
+    </ul>
+    <div
+      class="mt-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 sm:justify-center"
+    >
+      <p-button class="secondary w-full sm:w-auto" label="Login"></p-button>
+      <p-button class="primary w-full sm:w-auto" label="Book Demo"></p-button>
+    </div>
+  </div>
+
+  <!-- Large tablet and desktop layout -->
+  <div class="hidden lg:flex justify-between items-center">
+    <!-- Left spacer to balance the layout -->
+    <div class="flex-1 min-w-[100px]"></div>
+
+    <!-- Centered menu -->
+    <div class="flex-1 flex justify-center">
+      <ul class="flex gap-3 xl:gap-10">
+        <li>
+          <a class="cursor-pointer hover:text-gray-600 text-sm xl:text-base"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer hover:text-gray-600 text-sm xl:text-base"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer hover:text-gray-600 text-sm xl:text-base"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer hover:text-gray-600 text-sm xl:text-base"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer hover:text-gray-600 text-sm xl:text-base"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right buttons -->
+    <div class="flex-1 flex justify-end min-w-[100px]">
+      <p-button class="secondary lg:px-2 xl:px-4" label="Login"></p-button>
+      <p-button class="primary lg:px-2 xl:px-4" label="Book Demo"></p-button>
+    </div>
+  </div>
+</nav>
+<div class="hero container rounded-2xl relative">
+  <img src="assets/images/Earth.png" alt="Earth image" class="w-full h-auto" />
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+  >
+    <h1>GHG Accounting</h1>
+    <h1>Scope 1, Scope 2, Scope 3</h1>
+    <p class="mt-4">
+      Track, minimize, offset, and report your carbon emissions effortlessly to
+      drive faster decarbonization progress.
+    </p>
+  </div>
+</div>

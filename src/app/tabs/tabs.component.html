@@ -1,0 +1,20 @@
+<div class="net-zero-container">
+  <div class="sections-grid">
+    <div class="section" *ngFor="let section of sections">
+      <div
+        class="section-header"
+        [ngClass]="{ active: isActive(section.id) }"
+        (click)="setActiveTab(section.id)"
+      >
+        <div class="section-number">{{ section.id }}</div>
+        <div class="underline" *ngIf="isActive(section.id)"></div>
+      </div>
+      <div class="section-content">
+        <h2 [ngClass]="{ 'green-title': isActive(section.id) }">
+          {{ section.title }}
+        </h2>
+        <p>{{ section.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>

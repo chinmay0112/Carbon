@@ -1,0 +1,41 @@
+@import "../../assets/variables/variables.scss";
+:host {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+h2 {
+  font-weight: 700;
+  color: $color-primary;
+  font-size: 1.5em;
+  @media (max-width: 992px) {
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8em;
+  }
+}
+p {
+  font-size: 1.1em;
+  @media (max-width: 992px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.5em;
+  }
+}
+
+img {
+  background-color: $img-color;
+}
