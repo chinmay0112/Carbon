@@ -31,12 +31,18 @@
     .p-button {
       background-color: $color-primary;
       color: $black;
+      &:hover {
+        border: none;
+      }
     }
   }
   .secondary {
     .p-button {
       background-color: $color-secondary;
       color: $color-primary;
+      &:hover {
+        border: none;
+      }
     }
   }
 
